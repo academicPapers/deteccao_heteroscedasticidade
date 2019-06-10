@@ -1,0 +1,664 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[left=3cm,right=2cm,top=1.9cm,bottom=1.5cm,headheight=75pt,includeheadfoot]{geometry}
+\usepackage{hyperref}
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+\hypersetup{unicode=true,
+            pdftitle={Erros heteroscedástico-consistentes},
+            pdfauthor={Luiz Fernando Palin Droubi; Norberto Hochheim; Willian Zonato},
+            colorlinks=true,
+            linkcolor=red,
+            citecolor=green,
+            urlcolor=magenta,
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\providecommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{Erros heteroscedástico-consistentes}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \subtitle{Teoria e simulações}
+  \author{Luiz Fernando Palin Droubi\footnote{SPU/SC,
+  \href{mailto:luiz.droubi@planejamento.gov.br}{\nolinkurl{luiz.droubi@planejamento.gov.br}}} \\ Norberto Hochheim\footnote{UFSC,
+  \href{mailto:hochheim@gmail.com}{\nolinkurl{hochheim@gmail.com}}} \\ Willian Zonato\footnote{SPU/SC,
+  \href{mailto:willian.zonato@planejamento.gov.br}{\nolinkurl{willian.zonato@planejamento.gov.br}}}}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{10/06/2019}
+
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{caption}
+\usepackage{lastpage}
+%\usepackage{breqn}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{textcomp}
+\usepackage{graphics}
+\usepackage{lastpage}
+\usepackage{lscape}
+\setlength{\parindent}{1.25cm} % Default is 15pt.
+\usepackage{indentfirst}
+\usepackage{fontspec} % para Arial
+\setmainfont{Arial}
+\newcommand{\pkg}[1]{{\normalfont\fontseries{b}\selectfont #1}}
+\let\proglang=\textsf
+\let\code=\texttt
+\usepackage{fancyhdr}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[CO,CE]{
+  \includegraphics[width=15mm, height = 11mm]{SPU.jpg}\\
+  \textbf{MINISTÉRIO DA ECONOMIA}\\
+    \textbf{SECRETARIA DE COORDENAÇÃO E GOVERNANÇA DO PATRIMÔNIO DA UNIÃO}\\
+  SUPERINTENDÊNCIA DO PATRIMÔNIO DA UNIÃO EM SANTA CATARINA\\
+  Praça XV de Novembro nº 336, Centro, Florianópolis/SC\\
+  (48)3224-5399
+}
+\fancyfoot[CO, CE]{ARTIGO SUBMETIDO PARA A REVISTA XXX, JUNHO/2019
+}
+\fancyfoot[R]{\thepage~de~\pageref{LastPage}}
+
+\begin{document}
+\maketitle
+
+\hypertarget{introducao}{%
+\section{INTRODUÇÃO}\label{introducao}}
+
+A homoscedasticidade é uma das hipóteses que devem ser necessariamente
+verificadas na inferência clássica. A ausência da homoscedasticidade, ou
+seja, a heteroscedasticidade, no entanto, não invalida completamente um
+modelo de regressão linear, pois a heteroscedasticidade se relaciona
+apenas aos erros do modelo, o que afeta o cômputo dos intervalos de
+confiança das previsões e dos coeficientes do modelo, mas não invalida
+os valores centrais dos mesmos, ou seja, mesmo que um modelo contenha
+erros heteroscedásticos, este modelo pode ser utilizado para fazer
+previsões, desde que não se esteja interessado nos seus intervalos de
+confiança. Na Engenharia de Avaliações, contudo, frequentemente ou quase
+sempre, existe interesse em avaliar o grau de precisão do modelo, ou
+mesmo o grau de fundamentação de um laudo. Dado que estes enquadramentos
+normativos são feitos com a utilização dos intervalos de confiança das
+estimativas, ou com os p-valores dos testes de hipótese realizado pelos
+regressores, a utilização de modelos com erros heteroscedásticos nesta
+área torna-se complicada, o que não significa que isto seja impossível.
+Infelizmente a NBR14.653-2 não aborda este assunto, mas acredita-se que,
+mesmo assim, é possível se utilizar de modelos heteroscedásticos e ainda
+estar de acordo com a norma. Demonstrar como isso pode ser feito é o
+objetivo deste artigo.
+
+\hypertarget{desenvolvimento-e-fundamentacao}{%
+\section{DESENVOLVIMENTO E
+FUNDAMENTAÇÃO}\label{desenvolvimento-e-fundamentacao}}
+
+\hypertarget{a-hipotese-de-homoscedasticidade}{%
+\subsection{A Hipótese de
+homoscedasticidade}\label{a-hipotese-de-homoscedasticidade}}
+
+Segundo Long (\protect\hyperlink{ref-Long}{2000}, p. 5), na regressão
+linear, a variância do estimador MQO \(\hat{\beta}\) é:
+
+\[var(\hat{\beta})=(X'X)^{-1}X' \Omega X(X'X)^{-1}\]
+
+A adoção da hipótese da homoscedasticidade na inferência clássica, em
+conjunto com a hipótese da independência dos erros, pode ser resumida na
+equação abaixo:
+
+\[\Omega_{MQO}=\sigma^2I\] onde \(\sigma^2\) é a variância dos erros do
+modelo, suposta constante, e \(I\) é a matriz identidade
+\(n \text{x}n\), onde \(n\) é o número de dados do modelo. A matriz
+\(\Omega\) assim obtida, pode-se demonstrar, simplifica demasiado o
+cálculo da matriz de variância-covariância dos coeficientes de
+estimação, da maneira a seguir:
+
+\[var (\hat{\beta})=\sigma^2(X'X)^{-1}\]
+
+\hypertarget{deteccao-da-heteroscedasticidade}{%
+\subsection{Detecção da
+heteroscedasticidade}\label{deteccao-da-heteroscedasticidade}}
+
+Diversos testes foram desenvolvidos visando a detecção da
+heteroscedasticidade, dentro os quais citamos o teste de Goldfeld-Quandt
+(\protect\hyperlink{ref-GQ}{1965}), o teste de Park
+(\protect\hyperlink{ref-Park}{1966}), o teste de Glejser
+(\protect\hyperlink{ref-glejser}{1969}), o teste de Breusch-Pagan
+(\protect\hyperlink{ref-BP}{1979}) e o teste de White
+(\protect\hyperlink{ref-white1980}{1980}).
+
+Deve-se salientar que nenhum dos testes mencionados pode ser considerado
+melhor do que o outro, porque, conforme será visto, cada um deles testa
+uma hipótese em particular para a estrutura do erro. O teste de
+Breusch-Pagan, por exemplo, assume que a estrutura da variância do termo
+de erro seja linear, sendo muito eficiente para detectar este tipo de
+heteroscedasticidade. Se, no entanto, se estiver lidando com uma
+estrutura não-linear do termo de erro, este teste não será eficaz, sendo
+o teste de White melhor para estes casos.
+
+\hypertarget{teste-de-goldfeld-quandt}{%
+\subsubsection{Teste de
+Goldfeld-Quandt}\label{teste-de-goldfeld-quandt}}
+
+O teste de Goldfeld-Quandt (\protect\hyperlink{ref-GQ}{1965}) é
+aplicável a grandes amostras e consiste em omitir algumas amostras do
+modelo e comparar a estrutura da variância do termo de erro em
+diferentes subgrupos.
+
+\hypertarget{teste-de-park}{%
+\subsubsection{Teste de Park}\label{teste-de-park}}
+
+O teste de Park (\protect\hyperlink{ref-Park}{1966}) assume que a
+variância do termo de erro é proporcional a alguma potência da variável
+independente (\(\sigma_{u_i}^2 = \sigma^2X_i^\beta e^v\)). Desta
+maneira, o teste de Park consiste em estimar os resíduos da equação de
+regressão e então fazer uso de uma regressão destes resíduos em relação
+à variável dependente, da seguinte maneira:
+
+\[ln(u_i^2) = ln(\sigma^2) + \beta ln(X_i) + v_i\] Se o coeficiente
+\(\beta\) for significante, é indicativo da presença de
+heteroscedasticidade.
+
+\hypertarget{teste-de-glejser}{%
+\subsubsection{Teste de Glejser}\label{teste-de-glejser}}
+
+O teste de Glejser (\protect\hyperlink{ref-glejser}{1969}; \emph{apud}
+NWAKUYA; NWABUEZE, \protect\hyperlink{ref-nigeria}{2018}) consiste em
+testar se os valores absolutos dos resíduos (\(|\hat{u_i}|\)) da
+regressão original tem correlação com alguma variável independente do
+modelo (\(X_i\)), conforme formas abaixo:
+
+\[|\hat{u_i}| = \beta_0 + \beta_1 X_i + v_i\]
+\[|\hat{u_i}| = \beta_0 + \beta_1 \sqrt{X_i} + v_i\]
+\[|\hat{u_i}| = \beta_0 + \beta_1 \frac{1}{X_i} + v_i\]
+\[|\hat{u_i}| = \beta_0 + \beta_1 \frac{1}{\sqrt{X_i}} + v_i\]
+\[|\hat{u_i}| = \sqrt{\beta_0 + \beta_1 X_i} + v_i\]
+\[|\hat{u_i}| = \sqrt{\beta_0 + \beta_1 X_i^2} + v_i\]
+
+\hypertarget{teste-de-breusch-pagan}{%
+\subsubsection{Teste de Breusch-Pagan}\label{teste-de-breusch-pagan}}
+
+O teste de Breusch-Pagan (\protect\hyperlink{ref-BP}{1979}) consiste em
+assumir que a estrutura da variância do termo de erro seja linear em
+função das variáveis independentes do modelo. Assim, o método consiste
+em estimar a variância do erro à partir do quadrado dos resíduos da
+regressão linear e efetuar então uma regressão auxiliar deste termo em
+função dos regressores do mesmo modelo. Calcula-se o valor do
+coeficiente de determinação deste modelo auxiliar e aplica-se o teste do
+\(\chi^2\) para obter a sua significância. KOENKER
+(\protect\hyperlink{ref-koenker1981}{1981}) propõe um ajuste ao teste
+original, fazendo uso dos resíduos studantizados.
+
+\hypertarget{teste-de-white}{%
+\subsubsection{Teste de White}\label{teste-de-white}}
+
+O teste de White (\protect\hyperlink{ref-white1980}{1980}) consiste numa
+aplicação do teste de Breusch-Pagan, porém com a adição dos termos
+quadráticos e de interação do modelo original. Obviamente, o teste de
+White necessita de um número maios de graus de liberdade no modelo para
+ter eficácio, haja vista que a regressão auxiliar necessitará de
+diversos graus de liberdade.
+
+\hypertarget{alternativas-para-contornar-a-heteroscedasticidade}{%
+\subsection{Alternativas para contornar a
+heteroscedasticidade}\label{alternativas-para-contornar-a-heteroscedasticidade}}
+
+Ocorre que apenas raramente os dados do mundo real podem ser
+considerados homoscedásticos e independentes, o que faz com que
+procedimentos especiais tenham que ser tomados para a utilização do
+estimador MQO. A tentativa de se contornar a heteroscedasticidade pode
+ser feita de diversas formas, algumas mais trabalhosas, outras mais
+complexas, outras causando maior distorção ao modelo.
+
+\hypertarget{transformacao-da-variavel-dependente}{%
+\subsection{Transformação da variável
+dependente}\label{transformacao-da-variavel-dependente}}
+
+Na Engenharia de Avaliações, a primeira e mais usual forma de se
+contornar a heteroscedasticidade é através da aplicação de
+transformações à variável dependente. No entanto, esta não é a única
+alternativa e a transformação dos dados pode causar distorções
+significativas, o que pode ser um problema, especialmente considerando o
+problema da retransformação das variáveis transformadas.
+
+Segundo MATLOFF (\protect\hyperlink{ref-matloff2017}{2017}), se
+\(\varphi(x)\) é uma função convexa, então a desigualdade de Jensen se
+exprime na seguinte desigualdade:
+
+\[\varphi \left(\mathbb{E} [X]\right)\leq \mathbb{E} \left[\varphi (X)\right]\]
+
+\hypertarget{outros-estimadores}{%
+\subsection{Outros estimadores}\label{outros-estimadores}}
+
+Outra forma de contornar a heteroscedasticidade é através da utilização
+de outros estimadores, como o estimador dos mínimos quadrados
+ponderados. Este método consiste na adoção de um vetor de pesos
+conveninente escolhido e aplicado a cada uma das observações, de maneira
+que se elimine a heteroscedasticidade do modelo. O inconveniente deste
+método está na determinação do vetor de pesos a ser utilizado, o que não
+é trivial.
+
+\hypertarget{estimacao-heteroscedastico-consistente-da-matriz-de-variancia-covariancia}{%
+\subsection{Estimação heteroscedástico-consistente da matriz de
+variância-covariância}\label{estimacao-heteroscedastico-consistente-da-matriz-de-variancia-covariancia}}
+
+Uma maneira mais interessante de se detectar a heteroscedasticidade é
+através da estimação da matriz de variância-covariância dos coeficientes
+heteroscedástico-consistente, desfazendo-se assim, da hipótese da
+homoscedasticidade.
+
+Existem diversas maneiras de se estimar a matriz
+heteroscedástico-consistente, sendo que este método foi originalmente
+concebido por White (\protect\hyperlink{ref-white1980}{1980};
+\emph{apud} LONG; ERVIN, \protect\hyperlink{ref-Long}{2000}, p. 6), da
+seguinte forma:
+
+\[\text{HC0}=(X'X)^{-1}X' \hat{\Omega} X(X'X)^{-1} = (X'X)^{-1}X' diag[e_i^2] X(X'X)^{-1}\]
+Onde \(diag[e_i^2]\) é a matriz diagonal em que os elementos da diagonal
+são compostos pelo vetor do erros amostrais elevado ao quadrado.
+
+Posteriormente diversas pequenas modificações foram propostas ao método,
+como a correção dos resíduos pelos graus de liberdade (\(n/(n-k)\)) e
+outras.
+
+\hypertarget{estudo-de-caso}{%
+\section{ESTUDO DE CASO}\label{estudo-de-caso}}
+
+\hypertarget{exemplo-1}{%
+\subsection{Exemplo 1}\label{exemplo-1}}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{images/hetero-1} \end{center}
+
+\hypertarget{tesde-de-breusch-pagan}{%
+\subsubsection{Tesde de Breusch-Pagan}\label{tesde-de-breusch-pagan}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{bptest}\NormalTok{(fit, }\DataTypeTok{studentize =} \OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Breusch-Pagan test
+## 
+## data:  fit
+## BP = 40.275, df = 1, p-value = 2.206e-10
+\end{verbatim}
+
+\hypertarget{teste-de-breusch-pagan-studantizado-koenker}{%
+\subsubsection{Teste de Breusch-Pagan studantizado
+(Koenker)}\label{teste-de-breusch-pagan-studantizado-koenker}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{bptest}\NormalTok{(fit)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  studentized Breusch-Pagan test
+## 
+## data:  fit
+## BP = 18.864, df = 1, p-value = 1.404e-05
+\end{verbatim}
+
+\hypertarget{tesde-de-goldfeld-quandt}{%
+\subsubsection{Tesde de
+Goldfeld-Quandt}\label{tesde-de-goldfeld-quandt}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{gqtest}\NormalTok{(fit)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Goldfeld-Quandt test
+## 
+## data:  fit
+## GQ = 6.9269, df1 = 48, df2 = 48, p-value = 2.203e-10
+## alternative hypothesis: variance increases from segment 1 to 2
+\end{verbatim}
+
+\hypertarget{teste-de-white-1}{%
+\subsubsection{Teste de White}\label{teste-de-white-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{bptest}\NormalTok{(fit, }\OperatorTok{~}\NormalTok{X }\OperatorTok{+}\StringTok{ }\KeywordTok{I}\NormalTok{(X}\OperatorTok{^}\DecValTok{2}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  studentized Breusch-Pagan test
+## 
+## data:  fit
+## BP = 21.665, df = 2, p-value = 1.975e-05
+\end{verbatim}
+
+\hypertarget{exemplo-2}{%
+\subsection{Exemplo 2}\label{exemplo-2}}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{images/hetero2-1} \end{center}
+
+\hypertarget{tesde-de-breusch-pagan-1}{%
+\subsubsection{Tesde de Breusch-Pagan}\label{tesde-de-breusch-pagan-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{bptest}\NormalTok{(fit2, }\DataTypeTok{studentize =} \OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Breusch-Pagan test
+## 
+## data:  fit2
+## BP = 71.838, df = 1, p-value < 2.2e-16
+\end{verbatim}
+
+\hypertarget{teste-de-breusch-pagan-studantizado}{%
+\subsubsection{Teste de Breusch-Pagan
+studantizado}\label{teste-de-breusch-pagan-studantizado}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{bptest}\NormalTok{(fit2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  studentized Breusch-Pagan test
+## 
+## data:  fit2
+## BP = 20.962, df = 1, p-value = 4.684e-06
+\end{verbatim}
+
+\hypertarget{tesde-de-goldfeld-quandt-1}{%
+\subsubsection{Tesde de
+Goldfeld-Quandt}\label{tesde-de-goldfeld-quandt-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{gqtest}\NormalTok{(fit2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Goldfeld-Quandt test
+## 
+## data:  fit2
+## GQ = 31.975, df1 = 48, df2 = 48, p-value < 2.2e-16
+## alternative hypothesis: variance increases from segment 1 to 2
+\end{verbatim}
+
+\hypertarget{teste-de-white-2}{%
+\subsubsection{Teste de White}\label{teste-de-white-2}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{bptest}\NormalTok{(fit2, }\OperatorTok{~}\NormalTok{X }\OperatorTok{+}\StringTok{ }\KeywordTok{I}\NormalTok{(X}\OperatorTok{^}\DecValTok{2}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  studentized Breusch-Pagan test
+## 
+## data:  fit2
+## BP = 30.676, df = 2, p-value = 2.182e-07
+\end{verbatim}
+
+\hypertarget{exemplo-3}{%
+\subsection{Exemplo 3}\label{exemplo-3}}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{images/hetero3-1} \end{center}
+
+\hypertarget{tesde-de-breusch-pagan-2}{%
+\subsubsection{Tesde de Breusch-Pagan}\label{tesde-de-breusch-pagan-2}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{bptest}\NormalTok{(fit3, }\DataTypeTok{studentize =} \OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Breusch-Pagan test
+## 
+## data:  fit3
+## BP = 0.068957, df = 1, p-value = 0.7929
+\end{verbatim}
+
+\hypertarget{teste-de-breusch-pagan-studantizado-1}{%
+\subsubsection{Teste de Breusch-Pagan
+studantizado}\label{teste-de-breusch-pagan-studantizado-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{bptest}\NormalTok{(fit3)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  studentized Breusch-Pagan test
+## 
+## data:  fit3
+## BP = 0.021291, df = 1, p-value = 0.884
+\end{verbatim}
+
+\hypertarget{tesde-de-goldfeld-quandt-2}{%
+\subsubsection{Tesde de
+Goldfeld-Quandt}\label{tesde-de-goldfeld-quandt-2}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{gqtest}\NormalTok{(fit3)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Goldfeld-Quandt test
+## 
+## data:  fit3
+## GQ = 1.0325, df1 = 99, df2 = 98, p-value = 0.4373
+## alternative hypothesis: variance increases from segment 1 to 2
+\end{verbatim}
+
+\hypertarget{teste-de-white-3}{%
+\subsubsection{Teste de White}\label{teste-de-white-3}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{bptest}\NormalTok{(fit3, }\OperatorTok{~}\NormalTok{X }\OperatorTok{+}\StringTok{ }\KeywordTok{I}\NormalTok{(X}\OperatorTok{^}\DecValTok{2}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  studentized Breusch-Pagan test
+## 
+## data:  fit3
+## BP = 50.283, df = 2, p-value = 1.205e-11
+\end{verbatim}
+
+\hypertarget{referencias}{%
+\section*{REFERÊNCIAS}\label{referencias}}
+\addcontentsline{toc}{section}{REFERÊNCIAS}
+
+\hypertarget{refs}{}
+\leavevmode\hypertarget{ref-BP}{}%
+BREUSCH, T. S.; PAGAN, A. R. A simple test for heteroscedasticity and
+random coefficient variation. \textbf{Econometrica}, v. 47, n. 5, p.
+1287--1294, 1979. {[}Wiley, Econometric Society{]}. Disponível em:
+\textless{}\url{http://www.jstor.org/stable/1911963}\textgreater{}..
+
+\leavevmode\hypertarget{ref-glejser}{}%
+GLEJSER, H. A new test for heteroskedasticity. \textbf{Journal of the
+American Statistical Association}, v. 64, n. 325, p. 316--323, 1969.
+{[}American Statistical Association, Taylor \& Francis, Ltd.{]}.
+Disponível em:
+\textless{}\url{http://www.jstor.org/stable/2283741}\textgreater{}..
+
+\leavevmode\hypertarget{ref-GQ}{}%
+GOLDFELD, S. M.; QUANDT, R. E. Some tests for homoscedasticity.
+\textbf{Journal of the American Statistical Association}, v. 60, n. 310,
+p. 539--547, 1965. {[}American Statistical Association, Taylor \&
+Francis, Ltd.{]}. Disponível em:
+\textless{}\url{http://www.jstor.org/stable/2282689}\textgreater{}..
+
+\leavevmode\hypertarget{ref-koenker1981}{}%
+KOENKER, R. A note on studentizing a test for heteroscedasticity.
+\textbf{Journal of Econometrics}, v. 17, n. 1, p. 107--112, 1981.
+Disponível em:
+\textless{}\url{http://www.sciencedirect.com/science/article/pii/0304407681900622}\textgreater{}..
+
+\leavevmode\hypertarget{ref-Long}{}%
+LONG, J. S.; ERVIN, L. H. Using heteroscedasticity consistent standard
+errors in the linear regression model. \textbf{The American
+Statistician}, v. 54, n. 3, p. 217--224, 2000. Taylor \& Francis.
+Disponível em:
+\textless{}\url{https://www.tandfonline.com/doi/abs/10.1080/00031305.2000.10474549}\textgreater{}..
+
+\leavevmode\hypertarget{ref-matloff2017}{}%
+MATLOFF, N. \textbf{Statistical regression and classification: From
+linear models to machine learning}. Boca Raton, Florida: Chapman \&
+Hall, 2017.
+
+\leavevmode\hypertarget{ref-nigeria}{}%
+NWAKUYA, M. T.; NWABUEZE, J. C. Application of Box-Cox transformation as
+a corrective measure to heteroscedasticity using an economic data.
+\textbf{American Journal of Mathematics and Statistics}, v. 8, n. 1, p.
+8--12, 2018. Disponível em:
+\textless{}\url{http://article.sapub.org/10.5923.j.ajms.20180801.02.html\#Ref}\textgreater{}..
+
+\leavevmode\hypertarget{ref-Park}{}%
+PARK, R. E. Estimation with heteroscedastic error terms.
+\textbf{Econometrica}, v. 34, n. 4, p. 888--888, 1966. {[}Wiley,
+Econometric Society{]}. Disponível em:
+\textless{}\url{http://www.jstor.org/stable/1910108}\textgreater{}..
+
+\leavevmode\hypertarget{ref-white1980}{}%
+WHITE, H. A heteroskedasticity-consistent covariance matrix estimator
+and a direct test for heteroskedasticity. \textbf{Econometrica}, v. 48,
+n. 4, p. 817--38, 1980. Disponível em:
+\textless{}\url{https://EconPapers.repec.org/RePEc:ecm:emetrp:v:48:y:1980:i:4:p:817-38}\textgreater{}..
+
+
+\end{document}

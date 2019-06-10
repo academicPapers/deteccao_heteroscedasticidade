@@ -1,0 +1,14 @@
+@article{10.2307/2282689,
+ ISSN = {01621459},
+ URL = {http://www.jstor.org/stable/2282689},
+ abstract = {Two exact tests are presented for testing the hypothesis that the residuals from a least squares regression are homoscedastic. The results can be used to test the hypothesis that a linear [ratio] model explains the relationship between variables as opposed to the alternative that the ratio [linear] specification is correct. The first test is parametric and uses the F-statistic. The second test is nonparametric and uses the number of peaks in the ordered sequence of unsigned residuals. In conclusion, the results of some experimental calculations of the powers of the tests are discussed.},
+ author = {Stephen M. Goldfeld and Richard E. Quandt},
+ journal = {Journal of the American Statistical Association},
+ number = {310},
+ pages = {539--547},
+ publisher = {[American Statistical Association, Taylor & Francis, Ltd.]},
+ title = {Some Tests for Homoscedasticity},
+ volume = {60},
+ year = {1965}
+}
+

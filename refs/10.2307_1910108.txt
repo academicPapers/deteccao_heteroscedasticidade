@@ -1,0 +1,13 @@
+@article{10.2307/1910108,
+ ISSN = {00129682, 14680262},
+ URL = {http://www.jstor.org/stable/1910108},
+ author = {R. E. Park},
+ journal = {Econometrica},
+ number = {4},
+ pages = {888--888},
+ publisher = {[Wiley, Econometric Society]},
+ title = {Estimation with Heteroscedastic Error Terms},
+ volume = {34},
+ year = {1966}
+}
+

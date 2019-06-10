@@ -1,0 +1,14 @@
+@article{10.2307/1911963,
+ ISSN = {00129682, 14680262},
+ URL = {http://www.jstor.org/stable/1911963},
+ abstract = {A simple test for heteroscedastic disturbances in a linear regression model is developed using the framework of the Lagrangian multiplier test. For a wide range of heteroscedastic and random coefficient specifications, the criterion is given as a readily computed function of the OLS residuals. Some finite sampleevidence is presented to supplement the general asymptotic properties of Lagrangian multiplier tests.},
+ author = {T. S. Breusch and A. R. Pagan},
+ journal = {Econometrica},
+ number = {5},
+ pages = {1287--1294},
+ publisher = {[Wiley, Econometric Society]},
+ title = {A Simple Test for Heteroscedasticity and Random Coefficient Variation},
+ volume = {47},
+ year = {1979}
+}
+

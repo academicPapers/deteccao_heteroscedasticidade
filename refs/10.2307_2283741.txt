@@ -1,0 +1,14 @@
+@article{10.2307/2283741,
+ ISSN = {01621459},
+ URL = {http://www.jstor.org/stable/2283741},
+ abstract = {The quite general test for heteroskedasticity presented here regresses the absolute values of the residuals obtained by ordinary least-squares on some variable(s). Denoting the O.L.S. residuals by <tex-math>$\|\hat u\|$</tex-math>, one obtains, for instance, a regression like <tex-math>$\|\hat u\| = a + bz + \hat \epsilon$</tex-math> where z is a variable, a and b regression coefficients and <tex-math>$\hat \epsilon$</tex-math> the residuals of the new regression. We call the acceptance of a non-zero value for both a and b a case of "mixed heteroskedasticity", which we deem frequent in practice though neglected in handbooks. The paper also summarizes another test due to S. M. Goldfeld and R. E. Quandt and examines the powers of the two by using Monte-Carlo simulations: the new test seems to compare favourably, except perhaps in the case of large samples.},
+ author = {H. Glejser},
+ journal = {Journal of the American Statistical Association},
+ number = {325},
+ pages = {316--323},
+ publisher = {[American Statistical Association, Taylor & Francis, Ltd.]},
+ title = {A New Test for Heteroskedasticity},
+ volume = {64},
+ year = {1969}
+}
+
