@@ -33,46 +33,7 @@
             urlcolor=magenta,
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs}
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -206,7 +167,7 @@ homoscedasticidade}\label{a-hipotese-de-homoscedasticidade}}
 Segundo Long (\protect\hyperlink{ref-Long}{2000}, p. 5), na regressão
 linear, a variância do estimador MQO \(\hat{\beta}\) é:
 
-\[var(\hat{\beta})=(X'X)^{-1}X' \Omega X(X'X)^{-1}\]
+\[\mathrm{var}(\hat{\beta})=(X'X)^{-1}X' \Omega X(X'X)^{-1}\]
 
 A adoção da hipótese da homoscedasticidade na inferência clássica, em
 conjunto com a hipótese da independência dos erros, pode ser resumida na
@@ -219,7 +180,7 @@ modelo, suposta constante, e \(I\) é a matriz identidade
 cálculo da matriz de variância-covariância dos coeficientes de
 estimação, da maneira a seguir:
 
-\[var (\hat{\beta})=\sigma^2(X'X)^{-1}\]
+\[\mathrm{var} (\hat{\beta})=\sigma^2(X'X)^{-1}\]
 
 \hypertarget{deteccao-da-heteroscedasticidade}{%
 \subsection{Detecção da
@@ -370,233 +331,318 @@ outras.
 \hypertarget{estudo-de-caso}{%
 \section{ESTUDO DE CASO}\label{estudo-de-caso}}
 
+Para este estudo de caso foi utilizado software \proglang{R} 3.6.0. Os
+funções utilizadas para a execução dos testes são do pacote \pkg{lmtest}
+(ZEILEIS; HOTHORN, \protect\hyperlink{ref-lmtest}{2002}). Os gráficos
+foram confeccionados com o auxílio do pacote \pkg{mosaic} (PRUIM et al.,
+\protect\hyperlink{ref-mosaic}{2017}).
+
 \hypertarget{exemplo-1}{%
 \subsection{Exemplo 1}\label{exemplo-1}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{images/hetero-1} \end{center}
+\hypertarget{criacao-dos-dados}{%
+\subsubsection{Criação dos dados}\label{criacao-dos-dados}}
 
-\hypertarget{tesde-de-breusch-pagan}{%
-\subsubsection{Tesde de Breusch-Pagan}\label{tesde-de-breusch-pagan}}
+Neste primeiro exemplo foram gerados randomicamente para a variável
+dependente (\(Y\)). Para a variável independente (\(X\)), foram criados
+100 dados em sequência de 1 a 100. Para a varíavel dependente, com a
+utilização da função \code{rnorm}, foram criados dados de distribuição
+normal com média igual a média do vetor da variável independente
+(\(\bar{Y} = \bar{X}\)) e desvio-padrão variável em função de \(X\), da
+seguinte maneira:
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{bptest}\NormalTok{(fit, }\DataTypeTok{studentize =} \OtherTok{FALSE}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+\[\mathrm{desvio}(Y) = 0,4 \cdot X\] Ou seja, foi criada,
+randômicamente, um tipo linear de heteroscedasticidade. Os gráfico dos
+dados assim criados pode ser vistos na figura \ref{fig:hetero}.
 
-\begin{verbatim}
-## 
-##  Breusch-Pagan test
-## 
-## data:  fit
-## BP = 40.275, df = 1, p-value = 2.206e-10
-\end{verbatim}
+\begin{figure}[H]
 
-\hypertarget{teste-de-breusch-pagan-studantizado-koenker}{%
-\subsubsection{Teste de Breusch-Pagan studantizado
-(Koenker)}\label{teste-de-breusch-pagan-studantizado-koenker}}
+{\centering \includegraphics[width=0.6\linewidth]{images/hetero-1} 
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{bptest}\NormalTok{(fit)}
-\end{Highlighting}
-\end{Shaded}
+}
 
-\begin{verbatim}
-## 
-##  studentized Breusch-Pagan test
-## 
-## data:  fit
-## BP = 18.864, df = 1, p-value = 1.404e-05
-\end{verbatim}
+\caption{Forma linear de heteroscedasticidade.}\label{fig:hetero}
+\end{figure}
 
-\hypertarget{tesde-de-goldfeld-quandt}{%
-\subsubsection{Tesde de
-Goldfeld-Quandt}\label{tesde-de-goldfeld-quandt}}
+\hypertarget{testes}{%
+\paragraph{Testes}\label{testes}}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{gqtest}\NormalTok{(fit)}
-\end{Highlighting}
-\end{Shaded}
+Os resultados das estatísticas dos testes e suas significâncias estão
+resumidos na tabela 1. Pode-se verificar que, para este caso, todos os
+testes foram eficazes em não rejeitar a hipótese nula da
+homoscedasticidade, ou seja, todos os testes detectaram a presença da
+heteroscedasticidade.
 
-\begin{verbatim}
-## 
-##  Goldfeld-Quandt test
-## 
-## data:  fit
-## GQ = 6.9269, df1 = 48, df2 = 48, p-value = 2.203e-10
-## alternative hypothesis: variance increases from segment 1 to 2
-\end{verbatim}
+\hypertarget{park}{%
+\paragraph{Park}\label{park}}
 
-\hypertarget{teste-de-white-1}{%
-\subsubsection{Teste de White}\label{teste-de-white-1}}
+Apesar da forma linear da heteroscedasticidade presente, como o valor da
+estatística do teste t da variável \(\ln(X)\) resultou alto (5,48) e
+significante (\(\text{p-valor} =\) 3.335e-07), conclui-se que não se
+pode descartar a hipótese da heteroscedasticidade, ou seja, o teste de
+Park funcionou, mesmo na presença de uma forma de heteroscedasticidade
+diferente da pressuposta.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{bptest}\NormalTok{(fit, }\OperatorTok{~}\NormalTok{X }\OperatorTok{+}\StringTok{ }\KeywordTok{I}\NormalTok{(X}\OperatorTok{^}\DecValTok{2}\NormalTok{))}
-\end{Highlighting}
-\end{Shaded}
+\hypertarget{glejser}{%
+\paragraph{Glejser}\label{glejser}}
 
-\begin{verbatim}
-## 
-##  studentized Breusch-Pagan test
-## 
-## data:  fit
-## BP = 21.665, df = 2, p-value = 1.975e-05
-\end{verbatim}
+Foi utilizada a primeira forma (linear) do teste de Glejser. A
+significância do teste foi de 3.55e-09. Conclui-se que o teste funciona.
+Deve-se atentar, porém, que a forma de heteroscedasticidade, neste caso,
+era previamente conhecida, o que possibilitou a aplicação da forma
+``correta'' do teste, o que não ocorre na prática.
+
+\hypertarget{breusch-pagan}{%
+\paragraph{Breusch-Pagan}\label{breusch-pagan}}
+
+A forma original do teste de BP foi aplicada, através da função
+\code{bptest}:
+
+O teste de BP, neste caso, não logrou a rejeição da hipótese nula, ou
+seja, a da homoscedasticidade. Desta maneira, pode-se afirmar que o
+teste funcionou a contento.
+
+\hypertarget{breusch-pagan-studantizado-koenker}{%
+\paragraph{Breusch-Pagan studantizado
+(Koenker)}\label{breusch-pagan-studantizado-koenker}}
+
+O mesmo ocorre para o teste de BP com a utilização dos resíduos
+studantizados:
+
+\hypertarget{goldfeld-quandt}{%
+\paragraph{Goldfeld-Quandt}\label{goldfeld-quandt}}
+
+O teste de GQ neste caso foi eficaz em detectar a modificação na
+variância nas partições testadas.
+
+\hypertarget{white}{%
+\paragraph{White}\label{white}}
+
+Por fim, o teste de White mostrou-se adequado para a detecção da forma
+linear da heteroscedasticidade. No entanto, deve-se salientar, que para
+isto foi inutilmente utilizado um grau de liberdade a mais do que o
+teste de Breusch-Pagan, o que pode fazer a diferença no caso de pequenas
+amostras.
+
+\hypertarget{quadro-resumo}{%
+\subsubsection{Quadro-Resumo}\label{quadro-resumo}}
+
+\centerline{Tabela 1: Estatísticas e p-valores para os dados do Exemplo 1.}
+
+\begin{longtable}[]{@{}lrr@{}}
+\toprule
+Teste & Estatística & Significância\tabularnewline
+\midrule
+\endhead
+Park & 5,48 & 3.3e-07\tabularnewline
+Glejser & 6,49 & 3.5e-09\tabularnewline
+GQ & 15,95 & 2,5e-13\tabularnewline
+BP & 40,28 & 2,2e-10\tabularnewline
+Koenker & 18,86 & 1,4e-05\tabularnewline
+White & 21,66 & 1,98e-05\tabularnewline
+\bottomrule
+\end{longtable}
 
 \hypertarget{exemplo-2}{%
 \subsection{Exemplo 2}\label{exemplo-2}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{images/hetero2-1} \end{center}
+\hypertarget{criacao-dos-dados-1}{%
+\subsubsection{Criação dos dados}\label{criacao-dos-dados-1}}
 
-\hypertarget{tesde-de-breusch-pagan-1}{%
-\subsubsection{Tesde de Breusch-Pagan}\label{tesde-de-breusch-pagan-1}}
+Neste exemplo foram gerados randomicamente dados de distribuição normal
+para a variável dependente (\(Y\)), com a utilização da função
+\code{rnorm}, com média igual a média do vetor da variável independente
+(\(\bar{Y} = \bar{X}\)) e desvio-padrão variável em função de \(X\), da
+seguinte maneira:
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{bptest}\NormalTok{(fit2, }\DataTypeTok{studentize =} \OtherTok{FALSE}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+\[\mathrm{desvio}(Y) = 0,001 \cdot X^2\]
 
-\begin{verbatim}
-## 
-##  Breusch-Pagan test
-## 
-## data:  fit2
-## BP = 71.838, df = 1, p-value < 2.2e-16
-\end{verbatim}
+Ou seja, foi criada, randômicamente, um tipo suavemente não-linear de
+heteroscedasticidade. Os gráfico dos dados assim criados pode ser vistos
+na figura \ref{fig:hetero2}.
 
-\hypertarget{teste-de-breusch-pagan-studantizado}{%
-\subsubsection{Teste de Breusch-Pagan
-studantizado}\label{teste-de-breusch-pagan-studantizado}}
+\begin{figure}[H]
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{bptest}\NormalTok{(fit2)}
-\end{Highlighting}
-\end{Shaded}
+{\centering \includegraphics[width=0.6\linewidth]{images/hetero2-1} 
 
-\begin{verbatim}
-## 
-##  studentized Breusch-Pagan test
-## 
-## data:  fit2
-## BP = 20.962, df = 1, p-value = 4.684e-06
-\end{verbatim}
+}
 
-\hypertarget{tesde-de-goldfeld-quandt-1}{%
-\subsubsection{Tesde de
-Goldfeld-Quandt}\label{tesde-de-goldfeld-quandt-1}}
+\caption{Forma não-linear de heteroscedasticidade.}\label{fig:hetero2}
+\end{figure}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{gqtest}\NormalTok{(fit2)}
-\end{Highlighting}
-\end{Shaded}
+\hypertarget{testes-1}{%
+\subsubsection{Testes}\label{testes-1}}
 
-\begin{verbatim}
-## 
-##  Goldfeld-Quandt test
-## 
-## data:  fit2
-## GQ = 31.975, df1 = 48, df2 = 48, p-value < 2.2e-16
-## alternative hypothesis: variance increases from segment 1 to 2
-\end{verbatim}
+Os resultados das estatísticas dos testes e suas significâncias estão
+resumidos na tabela 2. Pode-se verificar que, para este caso, todos os
+testes foram eficazes em não rejeitar a hipótese nula da
+homoscedasticidade, ou seja, todos os testes detectaram a presença da
+heteroscedasticidade.
 
-\hypertarget{teste-de-white-2}{%
-\subsubsection{Teste de White}\label{teste-de-white-2}}
+\hypertarget{park-1}{%
+\paragraph{Park}\label{park-1}}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{bptest}\NormalTok{(fit2, }\OperatorTok{~}\NormalTok{X }\OperatorTok{+}\StringTok{ }\KeywordTok{I}\NormalTok{(X}\OperatorTok{^}\DecValTok{2}\NormalTok{))}
-\end{Highlighting}
-\end{Shaded}
+Apesar da forma linear da heteroscedasticidade presente, como o valor da
+estatística do teste t da variável \(\ln(X)\) resultou alto (5,64) e
+significante (\(\text{p-valor} =\) 1.652e-07), conclui-se que não se
+pode descartar a hipótese da heteroscedasticidade, ou seja, o teste de
+Park funcionou, mesmo na presença de uma forma de heteroscedasticidade
+diferente da pressuposta.
 
-\begin{verbatim}
-## 
-##  studentized Breusch-Pagan test
-## 
-## data:  fit2
-## BP = 30.676, df = 2, p-value = 2.182e-07
-\end{verbatim}
+\hypertarget{glejser-1}{%
+\paragraph{Glejser}\label{glejser-1}}
+
+Foi utilizada a primeira forma (linear) do teste de Glejser. A
+significância do teste foi de 3.55e-09. Conclui-se que o teste funciona.
+Deve-se atentar, porém, que a forma de heteroscedasticidade, neste caso,
+era previamente conhecida, o que possibilitou a aplicação da forma
+``correta'' do teste, o que não ocorre na prática.
+
+\hypertarget{breusch-pagan-1}{%
+\paragraph{Breusch-Pagan}\label{breusch-pagan-1}}
+
+O teste de BP, apesar de assumir a forma linear de heteroscedasticidade,
+logrou a rejeição da hipótese da homoscedasticidade. Isto ocorreu,
+talvez, pela não-linearidade da heteroscedasticidade, neste caso, ser
+singela.
+
+\hypertarget{breusch-pagan-studantizado-koenker-1}{%
+\paragraph{Breusch-Pagan studantizado
+(Koenker)}\label{breusch-pagan-studantizado-koenker-1}}
+
+O mesmo ocorre para ao teste de BP studantizado.
+
+\hypertarget{goldfeld-quandt-1}{%
+\paragraph{Goldfeld-Quandt}\label{goldfeld-quandt-1}}
+
+O teste de Goldfeld-Quandt foi eficaz também neste caso, detectando a
+presença da heteroscedasticidade.
+
+\hypertarget{white-1}{%
+\paragraph{White}\label{white-1}}
+
+Por fim, o teste de White, concebido para encontrar as formas
+não-lineares de heteroscedasticidade, também foi eficaz neste caso,
+rejeitando a hipótese nula da homoscedasticidade.
+
+\hypertarget{quadro-resumo-1}{%
+\subsubsection{Quadro-Resumo}\label{quadro-resumo-1}}
+
+\centerline{Tabela 2: Estatísticas e p-valores para os dados do Exemplo 2.}
+
+\begin{longtable}[]{@{}lrr@{}}
+\toprule
+Teste & Estatística & Significância\tabularnewline
+\midrule
+\endhead
+Park & 5,64 & 1.7e-07\tabularnewline
+Glejser & 6,49 & 3.5e-09\tabularnewline
+GQ & 220,9 & 5,4e-29\tabularnewline
+BP & 71,84 & 2,3e-17\tabularnewline
+Koenker & 20,96 & 4,68e-06\tabularnewline
+White & 30,68 & 2,18e-07\tabularnewline
+\bottomrule
+\end{longtable}
 
 \hypertarget{exemplo-3}{%
 \subsection{Exemplo 3}\label{exemplo-3}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{images/hetero3-1} \end{center}
+\hypertarget{criacao-dos-dados-2}{%
+\subsubsection{Criação dos dados}\label{criacao-dos-dados-2}}
 
-\hypertarget{tesde-de-breusch-pagan-2}{%
-\subsubsection{Tesde de Breusch-Pagan}\label{tesde-de-breusch-pagan-2}}
+Os dados foram criados da mesma maneira do exemplo anterior, porém com
+uma nova função para a variância, da seguinte maneira:
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{bptest}\NormalTok{(fit3, }\DataTypeTok{studentize =} \OtherTok{FALSE}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+\[\mathrm{desvio}(Y) = 0,5 \cdot (X-1)^2\]
 
-\begin{verbatim}
-## 
-##  Breusch-Pagan test
-## 
-## data:  fit3
-## BP = 0.068957, df = 1, p-value = 0.7929
-\end{verbatim}
+Ou seja, foi criada, randômicamente, um tipo de heteroscedasticidade
+não-linear mais drástico, onde a variância é menor no centro da amostra,
+aumentando nas extremidades. Os gráfico dos dados assim criados pode ser
+vistos na figura \ref{fig:hetero3}.
 
-\hypertarget{teste-de-breusch-pagan-studantizado-1}{%
-\subsubsection{Teste de Breusch-Pagan
-studantizado}\label{teste-de-breusch-pagan-studantizado-1}}
+\begin{figure}[H]
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{bptest}\NormalTok{(fit3)}
-\end{Highlighting}
-\end{Shaded}
+{\centering \includegraphics[width=0.6\linewidth]{images/hetero3-1} 
 
-\begin{verbatim}
-## 
-##  studentized Breusch-Pagan test
-## 
-## data:  fit3
-## BP = 0.021291, df = 1, p-value = 0.884
-\end{verbatim}
+}
 
-\hypertarget{tesde-de-goldfeld-quandt-2}{%
-\subsubsection{Tesde de
-Goldfeld-Quandt}\label{tesde-de-goldfeld-quandt-2}}
+\caption{Forma drasticamente não-linear de heteroscedasticidade.}\label{fig:hetero3}
+\end{figure}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{gqtest}\NormalTok{(fit3)}
-\end{Highlighting}
-\end{Shaded}
+\hypertarget{testes-2}{%
+\subsubsection{Testes}\label{testes-2}}
 
-\begin{verbatim}
-## 
-##  Goldfeld-Quandt test
-## 
-## data:  fit3
-## GQ = 1.0325, df1 = 99, df2 = 98, p-value = 0.4373
-## alternative hypothesis: variance increases from segment 1 to 2
-\end{verbatim}
+\hypertarget{park-2}{%
+\paragraph{Park}\label{park-2}}
 
-\hypertarget{teste-de-white-3}{%
-\subsubsection{Teste de White}\label{teste-de-white-3}}
+Como o valor da estatística do teste t da variável \(\ln(X)\) resultou
+alto (-3,09) e significante (\(\text{p-valor} =\) 0.002313), conclui-se
+que não se pode descartar a hipótese da heteroscedasticidade.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{bptest}\NormalTok{(fit3, }\OperatorTok{~}\NormalTok{X }\OperatorTok{+}\StringTok{ }\KeywordTok{I}\NormalTok{(X}\OperatorTok{^}\DecValTok{2}\NormalTok{))}
-\end{Highlighting}
-\end{Shaded}
+\hypertarget{glejser-2}{%
+\paragraph{Glejser}\label{glejser-2}}
 
-\begin{verbatim}
-## 
-##  studentized Breusch-Pagan test
-## 
-## data:  fit3
-## BP = 50.283, df = 2, p-value = 1.205e-11
-\end{verbatim}
+Neste exemplo, o teste de Glejser detecta a heteroscedasticidade, mas
+apenas na equação da forma quadrática, falhando em detectá-la na função
+de teste linear.
+
+Quando utilizada a forma quadrática do teste de Glejser. A significância
+do teste foi de 0.0168.
+
+\hypertarget{breusch-pagan-2}{%
+\paragraph{Breusch-Pagan}\label{breusch-pagan-2}}
+
+Na ocorrência da heteroscedasticidade não-linear extrema deste caso, o
+teste de BP não logra a rejeição da hipótese nula, ou seja, a da
+homoscedasticidade.
+
+\hypertarget{breusch-pagan-studantizado-koenker-2}{%
+\paragraph{Breusch-Pagan studantizado
+(Koenker)}\label{breusch-pagan-studantizado-koenker-2}}
+
+Também o teste de BP studantizado falha neste caso.
+
+\hypertarget{goldfeld-quandt-2}{%
+\paragraph{Goldfeld-Quandt}\label{goldfeld-quandt-2}}
+
+Neste caso, o teste de Goldfeld=Quandt não logrou a rejeição da hipótese
+nula, ou seja, a da homoscedasticidade, apesar de ser sabido que há
+heteroscedasticidade no modelo. Ou seja, o teste falha em detectar a
+heteroscedasticidade pela própria característica do mesmo, que divide em
+a amostra em duas partições, excluindo-se uma fração dos dados centrais
+(aqui 25\%) e compara suas variâncias. Como no presente caso a variância
+muda igualmente em ambas as extremidades da amostra, o teste não a
+detecta.
+
+\hypertarget{white-2}{%
+\paragraph{White}\label{white-2}}
+
+Por fim, o teste de White mostrou-se adequado para a detecção da forma
+de heteroscedasticidade drasticamente não-linear, como era de se
+esperar.
+
+\hypertarget{quadro-resumo-2}{%
+\subsubsection{Quadro-Resumo}\label{quadro-resumo-2}}
+
+\centerline{Tabela 3: Estatísticas e p-valores para os dados do Exemplo 3.}
+
+\begin{longtable}[]{@{}lrr@{}}
+\toprule
+Teste & Estatística & Significância\tabularnewline
+\midrule
+\endhead
+Park & -3,09 & 0.0023\tabularnewline
+Glejser -- forma linear & 6,49 & 3.5e-09\tabularnewline
+Glejser -- forma quadrática & 2,41 & 3.5e-09\tabularnewline
+GQ & 1,071 & 0,39\tabularnewline
+BP & 0,1466 & 0,7\tabularnewline
+Koenker & 0,04362 & 0,835\tabularnewline
+White & 47,36 & 5,21e-11\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{conclusao}{%
+\section{CONCLUSÃO}\label{conclusao}}
 
 \hypertarget{referencias}{%
 \section*{REFERÊNCIAS}\label{referencias}}
@@ -654,11 +700,23 @@ PARK, R. E. Estimation with heteroscedastic error terms.
 Econometric Society{]}. Disponível em:
 \textless{}\url{http://www.jstor.org/stable/1910108}\textgreater{}..
 
+\leavevmode\hypertarget{ref-mosaic}{}%
+PRUIM, R.; KAPLAN, D. T.; HORTON, N. J. The mosaic package: Helping
+students to 'think with data' using r. \textbf{The R Journal}, v. 9, n.
+1, p. 77--102, 2017. Disponível em:
+\textless{}\url{https://journal.r-project.org/archive/2017/RJ-2017-024/index.html}\textgreater{}..
+
 \leavevmode\hypertarget{ref-white1980}{}%
 WHITE, H. A heteroskedasticity-consistent covariance matrix estimator
 and a direct test for heteroskedasticity. \textbf{Econometrica}, v. 48,
 n. 4, p. 817--38, 1980. Disponível em:
 \textless{}\url{https://EconPapers.repec.org/RePEc:ecm:emetrp:v:48:y:1980:i:4:p:817-38}\textgreater{}..
+
+\leavevmode\hypertarget{ref-lmtest}{}%
+ZEILEIS, A.; HOTHORN, T. Diagnostic checking in regression
+relationships. \textbf{R News}, v. 2, n. 3, p. 7--10, 2002. Disponível
+em:
+\textless{}\url{https://CRAN.R-project.org/doc/Rnews/}\textgreater{}..
 
 
 \end{document}

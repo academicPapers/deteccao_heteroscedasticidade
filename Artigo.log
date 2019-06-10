@@ -1,13 +1,13 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.5.12)  10 JUN 2019 12:08
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.6.10)  10 JUN 2019 21:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **Artigo.tex
 (./Artigo.tex
 LaTeX2e <2018-12-01>
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cls
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/size12.clo
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 )
 \c@part=\count80
@@ -21,7 +21,7 @@ File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
+) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -55,40 +55,29 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.s
-ty
+) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.
-sty
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks14
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.st
-y
+)) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip43
 For additional information on amsmath, use the `?' option.
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.st
-y
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks15
 \ex@=\dimen103
-))
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen104
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count88
@@ -128,17 +117,12 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 \mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ifxetex/ifxetex.
-sty
+) (/home/droubi/.TinyTeX/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/oberdiek/ifluate
-x.sty
+) (/home/droubi/.TinyTeX/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fixltx2e.st
-y
+) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/base/fixltx2e.sty
 Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
 Applying: [2015/01/01] Old fixltx2e package on input line 46.
 
@@ -147,27 +131,18 @@ Package fixltx2e Warning: fixltx2e is not required with releases after 2015
 (fixltx2e)                See the latexrelease package for details.
 
 Already applied: [0000/00/00] Old fixltx2e package on input line 53.
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/xelatex/mathspec/mathspe
-c.sty
+) (/home/droubi/.TinyTeX/texmf-dist/tex/xelatex/mathspec/mathspec.sty
 Package: mathspec 2016/12/22 v0.2b LaTeX Package (Mathematics font selection fo
 r XeLaTeX)
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.
-sty
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count100
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.
-sty
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/
-xparse.sty
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2019-05-09 L3 programming layer (loader) 
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3-cod
-e.tex
-Package: expl3 2019-05-09 L3 programming layer (code)
+) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.sty (/home/drou
+bi/.TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/home/droubi/.Ti
+nyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2019-05-28 L3 programming layer (loader) 
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2019-05-28 L3 programming layer (code)
 \c_max_int=\count101
 \l_tmpa_int=\count102
 \l_tmpb_int=\count103
@@ -314,25 +289,21 @@ Package: expl3 2019-05-09 L3 programming layer (code)
 \l__seq_internal_a_int=\count181
 \l__seq_internal_b_int=\count182
 \c__deprecation_minus_one=\count183
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3kernel/l3xdvipdf
-mx.def
+) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
 File: l3xdvipdfmx.def 2019-04-06 v L3 Experimental driver: xdvipdfmx
 \l__driver_internal_box=\box47
 \g__driver_graphics_int=\count184
 \g__driver_pdf_object_int=\count185
 \g__driver_pdf_annotation_int=\count186
 ))
-Package: xparse 2019-05-03 L3 Experimental document command parser
+Package: xparse 2019-05-28 L3 Experimental document command parser
 \l__xparse_current_arg_int=\count187
 \g__xparse_grabber_int=\count188
 \l__xparse_m_args_int=\count189
 \l__xparse_v_nesting_int=\count190
 )
 Package: fontspec 2019/03/15 v2.7c Font selection for XeLaTeX and LuaLaTeX
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec-
-xetex.sty
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
 Package: fontspec-xetex 2019/03/15 v2.7c Font selection for XeLaTeX and LuaLaTe
 X
 \l__fontspec_script_int=\count191
@@ -349,46 +320,35 @@ X
 \l__fontspec_tmpa_dim=\dimen144
 \l__fontspec_tmpb_dim=\dimen145
 \l__fontspec_tmpc_dim=\dimen146
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/tuenc.def
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/base/tuenc.def
 File: tuenc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TU on input line 82.
-))
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.
-cfg)
+)) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.cfg)
 LaTeX Info: Redefining \itshape on input line 4051.
 LaTeX Info: Redefining \slshape on input line 4056.
 LaTeX Info: Redefining \scshape on input line 4061.
 LaTeX Info: Redefining \upshape on input line 4066.
 LaTeX Info: Redefining \em on input line 4096.
 LaTeX Info: Redefining \emph on input line 4121.
-))
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.st
-y
+)) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.
-tex
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils
-.tex
+(/home/droubi/.TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/home/droubi
+/.TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks20
 \XKV@tempa@toks=\toks21
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/xkeyval/keyval.t
-ex))
+(/home/droubi/.TinyTeX/texmf-dist/tex/generic/xkeyval/keyval.tex))
 \XKV@depth=\count268
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \c@eu@=\count269
 \c@eu@i=\count270
 \c@mkern=\count271
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/upquote/upquote.st
-y
+) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -402,7 +362,7 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             Family '?' is the default used for unknown fonts.
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ts1enc.def
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 )
 LaTeX Info: Redefining \oldstylenums on input line 334.
@@ -468,17 +428,11 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
-))
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/geometry/geometry.
-sty
+)) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/04/16 v5.8 Page Geometry
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/oberdiek/ifpdf.s
-ty
+(/home/droubi/.TinyTeX/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/oberdiek/ifvtex.
-sty
+) (/home/droubi/.TinyTeX/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
@@ -494,18 +448,12 @@ Package ifvtex Info: VTeX not detected.
 \Gm@layouthoffset=\dimen153
 \Gm@layoutvoffset=\dimen154
 \Gm@dimlist=\toks22
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.
-sty
+) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/oberdiek/hobsub-
-hyperref.sty
+(/home/droubi/.TinyTeX/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/oberdiek/hobsub-
-generic.sty
+(/home/droubi/.TinyTeX/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
@@ -538,27 +486,19 @@ Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/oberdiek/auxhook.s
-ty
+) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/oberdiek/kvoptions
-.sty
+) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen155
 \Hy@linkcounter=\count275
 \Hy@pagecounter=\count276
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.de
-f
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count277
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/latexconfig/hyperr
-ef.cfg
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4519.
@@ -569,7 +509,7 @@ Package hyperref Info: Backreferencing OFF on input line 4539.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4772.
 \c@Hy@tempcnt=\count278
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -592,16 +532,11 @@ LaTeX Info: Redefining \pageref on input line 6454.
 \c@Hfootnote=\count282
 )
 Package hyperref Info: Driver (autodetected): hxetex.
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hxetex.de
-f
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/hyperref/hxetex.def
 File: hxetex.def 2018/11/30 v6.88e Hyperref driver for XeTeX
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2018/11/30 v6.88e Hyperref: PDF Unicode definition (HO)
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/oberdiek/stringe
-nc.sty
+) (/home/droubi/.TinyTeX/texmf-dist/tex/generic/oberdiek/stringenc.sty
 Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
 )
 )
@@ -610,9 +545,7 @@ Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
 \HyField@AnnotCount=\count284
 \Fld@listcount=\count285
 \c@bookmark@seq@number=\count286
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/oberdiek/rerunfile
-check.sty
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
@@ -620,203 +553,138 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip52
 )
 Package hyperref Info: Option `unicode' set `true' on input line 34.
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/oberdiek/se-asci
-i-print.def
+(/home/droubi/.TinyTeX/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
 File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 34.
 Package hyperref Info: Option `breaklinks' set `true' on input line 34.
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color
-.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: xetex.def on input line 147.
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def/xetex
-.def
-File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/dvipsnam.
-def
-File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-))
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.
-sty
-Package: fancyvrb 2019/01/15
-Style option: `fancyvrb' v3.2a <2019/01/15> (tvz)
-\FV@CodeLineNo=\count287
-\FV@InFile=\read2
-\FV@TabBox=\box49
-\c@FancyVerbLine=\count288
-\FV@StepNumber=\count289
-\FV@OutFile=\write3
-) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/framed/framed.st
-y
-Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip53
-\fb@frw=\dimen159
-\fb@frh=\dimen160
-\FrameRule=\dimen161
-\FrameSep=\dimen162
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.
-sty
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)+ FMi change
+\LTleft=\skip53
+\LTright=\skip54
+\LTpre=\skip55
+\LTpost=\skip56
+\LTchunksize=\count287
+\LTcapwidth=\dimen159
+\LT@head=\box49
+\LT@firsthead=\box50
+\LT@foot=\box51
+\LT@lastfoot=\box52
+\LT@cols=\count288
+\LT@rows=\count289
+\c@LT@tables=\count290
+\c@LT@chunks=\count291
+\LT@p@ftn=\toks23
+) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen160
+\lightrulewidth=\dimen161
+\cmidrulewidth=\dimen162
+\belowrulesep=\dimen163
+\belowbottomsep=\dimen164
+\aboverulesep=\dimen165
+\abovetopsep=\dimen166
+\cmidrulesep=\dimen167
+\cmidrulekern=\dimen168
+\defaultaddspace=\dimen169
+\@cmidla=\count292
+\@cmidlb=\count293
+\@aboverulesep=\dimen170
+\@belowrulesep=\dimen171
+\@thisruleclass=\count294
+\@lastruleclass=\count295
+\@thisrulewidth=\dimen172
+) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphics.
-sty
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graph
-ics.cfg
+) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 99.
-)
-\Gin@req@height=\dimen163
-\Gin@req@width=\dimen164
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/oberdiek/grffile.s
-ty
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen173
+\Gin@req@width=\dimen174
+) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/oberdiek/grffile.sty
 Package: grffile 2017/06/30 v1.18 Extended file name support for graphics (HO)
 Package grffile Info: Option `multidot' is set to `true'.
 Package grffile Info: Option `extendedchars' is set to `false'.
 Package grffile Info: Option `space' is set to `true'.
 Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 494.
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/titling/titling.st
-y
+) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/titling/titling.sty
 Package: titling 2009/09/04 v2.1d maketitle typesetting
-\thanksmarkwidth=\skip54
-\thanksmargin=\skip55
-\droptitle=\skip56
-) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/babel.st
-y
+\thanksmarkwidth=\skip57
+\thanksmargin=\skip58
+\droptitle=\skip59
+) (/home/droubi/.TinyTeX/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2019/05/04 3.31 The Babel package
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/switch.def
+(/home/droubi/.TinyTeX/texmf-dist/tex/generic/babel/switch.def
 File: switch.def 2019/05/04 3.31 Babel switching mechanism
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel-portuges/p
-ortuges.ldf
+) (/home/droubi/.TinyTeX/texmf-dist/tex/generic/babel-portuges/portuges.ldf
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/babel.def
+(/home/droubi/.TinyTeX/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2019/05/04 3.31 Babel common definitions
-\babel@savecnt=\count290
-\U@D=\dimen165
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/xebabel.de
-f
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/txtbabel.d
-ef))
-\bbl@dirlevel=\count291
+\babel@savecnt=\count296
+\U@D=\dimen175
+(/home/droubi/.TinyTeX/texmf-dist/tex/generic/babel/xebabel.def (/home/droubi/.
+TinyTeX/texmf-dist/tex/generic/babel/txtbabel.def))
+\bbl@dirlevel=\count297
 )
 \l@brazil = a dialect from \language\l@portuges 
 Package babel Info: Making " an active character on input line 145.
-)) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.sty
+)) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count292
-\float@exts=\toks23
-\float@box=\box50
-\@float@everytoks=\toks24
-\@floatcapt=\box51
-) (c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/subfig/subfig.st
-y
+\c@float@type=\count298
+\float@exts=\toks24
+\float@box=\box53
+\@float@everytoks=\toks25
+\@floatcapt=\box54
+) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption.st
-y
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption3.s
-ty
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
-\captionmargin=\dimen166
-\captionmargin@=\dimen167
-\captionwidth=\dimen168
-\caption@tempdima=\dimen169
-\caption@indent=\dimen170
-\caption@parindent=\dimen171
-\caption@hangindent=\dimen172
+\captionmargin=\dimen176
+\captionmargin@=\dimen177
+\captionwidth=\dimen178
+\caption@tempdima=\dimen179
+\caption@indent=\dimen180
+\caption@parindent=\dimen181
+\caption@hangindent=\dimen182
 )
-\c@caption@flags=\count293
-\c@ContinuedFloat=\count294
+\c@caption@flags=\count299
+\c@ContinuedFloat=\count300
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
-)
-\c@KVtest=\count295
-\sf@farskip=\skip57
-\sf@captopadj=\dimen173
-\sf@capskip=\skip58
-\sf@nearskip=\skip59
-\c@subfigure=\count296
-\c@subfigure@save=\count297
-\c@lofdepth=\count298
-\c@subtable=\count299
-\c@subtable@save=\count300
-\c@lotdepth=\count301
-\sf@top=\skip60
-\sf@bottom=\skip61
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lastpage/lastpage.
-sty
+Package caption Info: longtable package is loaded.
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2018/08/26 v1.4-95 longtable captions (AR)
+))
+\c@KVtest=\count301
+\sf@farskip=\skip60
+\sf@captopadj=\dimen183
+\sf@capskip=\skip61
+\sf@nearskip=\skip62
+\c@subfigure=\count302
+\c@subfigure@save=\count303
+\c@lofdepth=\count304
+\c@subtable=\count305
+\c@subtable@save=\count306
+\c@lotdepth=\count307
+\sf@top=\skip63
+\sf@bottom=\skip64
+) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/lastpage/lastpage.sty
 Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.
-sty
-Package: booktabs 2016/04/27 v1.618033 publication quality tables
-\heavyrulewidth=\dimen174
-\lightrulewidth=\dimen175
-\cmidrulewidth=\dimen176
-\belowrulesep=\dimen177
-\belowbottomsep=\dimen178
-\aboverulesep=\dimen179
-\abovetopsep=\dimen180
-\cmidrulesep=\dimen181
-\cmidrulekern=\dimen182
-\defaultaddspace=\dimen183
-\@cmidla=\count302
-\@cmidlb=\count303
-\@aboverulesep=\dimen184
-\@belowrulesep=\dimen185
-\@thisruleclass=\count304
-\@lastruleclass=\count305
-\@thisrulewidth=\dimen186
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable.st
-y
-Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)+ FMi change
-\LTleft=\skip62
-\LTright=\skip63
-\LTpre=\skip64
-\LTpost=\skip65
-\LTchunksize=\count306
-\LTcapwidth=\dimen187
-\LT@head=\box52
-\LT@firsthead=\box53
-\LT@foot=\box54
-\LT@lastfoot=\box55
-\LT@cols=\count307
-\LT@rows=\count308
-\c@LT@tables=\count309
-\c@LT@chunks=\count310
-\LT@p@ftn=\toks25
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/lscape.st
-y
+) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
-)
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/indentfirst.
-sty
+) (/home/droubi/.TinyTeX/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
 
@@ -826,22 +694,10 @@ Package fontspec Info: Arial scale = 0.8311558380414313.
 Package fontspec Info: Arial scale = 0.8311558380414313.
 
 
-Package fontspec Info: Arial scale = 0.8311558380414313.
-
-
-Package fontspec Info: Arial/B scale = 0.8311558380414313.
-
-
 Package fontspec Info: Arial/B scale = 0.8311558380414313.
 
 
 Package fontspec Info: Arial/I scale = 0.8311558380414313.
-
-
-Package fontspec Info: Arial/I scale = 0.8311558380414313.
-
-
-Package fontspec Info: Arial/BI scale = 0.8311558380414313.
 
 
 Package fontspec Info: Arial/BI scale = 0.8311558380414313.
@@ -855,84 +711,71 @@ Package fontspec Info: Font family 'Arial(0)' created for font 'Arial' with
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[0.8311558380414313]"Arial/OT:script=latn;language=
-DFLT;mapping=tex-text;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[0.8311558380414313]"Arial/OT:script=latn;language=
-DFLT;+smcp;mapping=tex-text;"
+(fontspec)             <->s*[0.8311558380414313]"Arial/OT:mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             - 'bold' (bx/n) with NFSS spec.:
-(fontspec)             <->s*[0.8311558380414313]"Arial/B/OT:script=latn;languag
-e=DFLT;mapping=tex-text;"
-(fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.:
-(fontspec)             <->s*[0.8311558380414313]"Arial/B/OT:script=latn;languag
-e=DFLT;+smcp;mapping=tex-text;"
+(fontspec)             <->s*[0.8311558380414313]"Arial/B/OT:mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.: 
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[0.8311558380414313]"Arial/I/OT:script=latn;languag
-e=DFLT;mapping=tex-text;"
-(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
-(fontspec)             <->s*[0.8311558380414313]"Arial/I/OT:script=latn;languag
-e=DFLT;+smcp;mapping=tex-text;"
+(fontspec)             <->s*[0.8311558380414313]"Arial/I/OT:mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.: 
 (fontspec)             - 'bold italic' (bx/it) with NFSS spec.:
-(fontspec)             <->s*[0.8311558380414313]"Arial/BI/OT:script=latn;langua
-ge=DFLT;mapping=tex-text;"
-(fontspec)             - 'bold italic small caps'  (bx/itsc) with NFSS spec.:
-(fontspec)             <->s*[0.8311558380414313]"Arial/BI/OT:script=latn;langua
-ge=DFLT;+smcp;mapping=tex-text;"
+(fontspec)             <->s*[0.8311558380414313]"Arial/BI/OT:mapping=tex-text;"
 
-LaTeX Info: Redefining \rmfamily on input line 152.
+(fontspec)             - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
+
+LaTeX Info: Redefining \rmfamily on input line 113.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 9.97394pt on input line 152.
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyhdr/fancyhdr.
-sty
+(Font)              scaled to size 9.97394pt on input line 113.
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
 s
-\f@nch@headwidth=\skip66
-\f@nch@O@elh=\skip67
-\f@nch@O@erh=\skip68
-\f@nch@O@olh=\skip69
-\f@nch@O@orh=\skip70
-\f@nch@O@elf=\skip71
-\f@nch@O@erf=\skip72
-\f@nch@O@olf=\skip73
-\f@nch@O@orf=\skip74
+\f@nch@headwidth=\skip65
+\f@nch@O@elh=\skip66
+\f@nch@O@erh=\skip67
+\f@nch@O@olh=\skip68
+\f@nch@O@orh=\skip69
+\f@nch@O@elf=\skip70
+\f@nch@O@erf=\skip71
+\f@nch@O@olf=\skip72
+\f@nch@O@orf=\skip73
 )
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 166.
+less on input line 127.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 168.
+less on input line 129.
 
 (./Artigo.aux)
 \openout1 = `Artigo.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 171.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 171.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 132.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 132.
 
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ts1cmr.fd
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -967,111 +810,110 @@ LaTeX Font Info:    ... okay on input line 171.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box56
-Package hyperref Info: Link coloring ON on input line 171.
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.s
-ty
+\AtBeginShipoutBox=\box55
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: xetex.def on input line 147.
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+))
+Package hyperref Info: Link coloring ON on input line 132.
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/oberdiek/gettitl
-estring.sty
+(/home/droubi/.TinyTeX/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count311
+\c@section@level=\count308
 )
-LaTeX Info: Redefining \ref on input line 171.
-LaTeX Info: Redefining \pageref on input line 171.
-LaTeX Info: Redefining \nameref on input line 171.
+LaTeX Info: Redefining \ref on input line 132.
+LaTeX Info: Redefining \pageref on input line 132.
+LaTeX Info: Redefining \nameref on input line 132.
 (./Artigo.out) (./Artigo.out)
-\@outlinefile=\write4
-\openout4 = `Artigo.out'.
+\@outlinefile=\write3
+\openout3 = `Artigo.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
-Package caption Info: longtable package is loaded.
-
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/ltcaption.
-sty
-Package: ltcaption 2018/08/26 v1.4-95 longtable captions (AR)
-)
 Package caption Info: End \AtBeginDocument code.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 171.
+(lastpage)             ! on input line 132.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 20.67929pt on input line 172.
+(Font)              scaled to size 20.67929pt on input line 133.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 11.96872pt on input line 172.
+(Font)              scaled to size 11.96872pt on input line 133.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
-(Font)              scaled to size 11.96872pt on input line 172.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 172.
+(Font)              scaled to size 11.96872pt on input line 133.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 133.
 
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 172.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 133.
 
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 172
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 133
 .
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 172
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 133
 .
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 172.
+(Font)              <14.4> on input line 133.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 172.
+(Font)              <10> on input line 133.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 172.
-LaTeX Font Info:    Try loading font information for U+msa on input line 172.
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
+(Font)              <7> on input line 133.
+LaTeX Font Info:    Try loading font information for U+msa on input line 133.
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 172.
-(c:/Users/lfpdr/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
+LaTeX Font Info:    Try loading font information for U+msb on input line 133.
+(/home/droubi/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 8.31161pt on input line 172.
+(Font)              scaled to size 8.31161pt on input line 133.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 9.9739pt on input line 172.
+(Font)              scaled to size 9.9739pt on input line 133.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 172.
+(Font)              <5> on input line 133.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 5.81813pt on input line 172.
+(Font)              scaled to size 5.81813pt on input line 133.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 6.98174pt on input line 172.
+(Font)              scaled to size 6.98174pt on input line 133.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 14.36246pt on input line 175.
+(Font)              scaled to size 14.36246pt on input line 136.
 LaTeX Font Info:    Font shape `TU/Arial(0)/bx/n' will be
-(Font)              scaled to size 14.36246pt on input line 175.
+(Font)              scaled to size 14.36246pt on input line 136.
 LaTeX Font Info:    Font shape `TU/Arial(0)/bx/n' will be
-(Font)              scaled to size 11.96872pt on input line 204.
+(Font)              scaled to size 11.96872pt on input line 165.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 207.
+(Font)              <12> on input line 168.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 207.
+(Font)              <8> on input line 168.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 207.
+(Font)              <6> on input line 168.
 [1
 
 ]
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 6.64929pt on input line 217.
+(Font)              scaled to size 6.64929pt on input line 178.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 4.98697pt on input line 217.
+(Font)              scaled to size 4.98697pt on input line 178.
 LaTeX Font Info:    Font shape `TU/Arial(0)/bx/n' will be
-(Font)              scaled to size 9.97394pt on input line 247.
+(Font)              scaled to size 9.97394pt on input line 208.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
-(Font)              scaled to size 9.97394pt on input line 271.
+(Font)              scaled to size 9.97394pt on input line 232.
 File: SPU.jpg Graphic file (type bmp)
 <SPU.jpg>
 
@@ -1084,54 +926,64 @@ This may cause the page layout to be inconsistent, however.
 File: SPU.jpg Graphic file (type bmp)
 <SPU.jpg>
 [3]
+
+LaTeX Font Warning: Font shape `TU/Arial(0)/b/n' undefined
+(Font)              using `TU/Arial(0)/m/n' instead on input line 335.
+
+LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
+(Font)              scaled to size 9.97394pt on input line 337.
+File: SPU.jpg Graphic file (type bmp)
+<SPU.jpg>
+[4]
 File: images/hetero-1.png Graphic file (type bmp)
 <images/hetero-1.png>
 File: SPU.jpg Graphic file (type bmp)
 <SPU.jpg>
-[4]
-LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 383.
+[5]
 File: SPU.jpg Graphic file (type bmp)
 <SPU.jpg>
-[5]
+[6]
 File: images/hetero2-1.png Graphic file (type bmp)
 <images/hetero2-1.png>
 File: SPU.jpg Graphic file (type bmp)
 <SPU.jpg>
-[6]
-File: SPU.jpg Graphic file (type bmp)
-<SPU.jpg>
 [7]
-File: images/hetero3-1.png Graphic file (type bmp)
-<images/hetero3-1.png>
 File: SPU.jpg Graphic file (type bmp)
 <SPU.jpg>
 [8]
+File: images/hetero3-1.png Graphic file (type bmp)
+<images/hetero3-1.png>
 File: SPU.jpg Graphic file (type bmp)
 <SPU.jpg>
 [9]
 File: SPU.jpg Graphic file (type bmp)
 <SPU.jpg>
-[10] 
+[10]
+File: SPU.jpg Graphic file (type bmp)
+<SPU.jpg>
+[11] 
 AED: lastpage setting LastPage
 File: SPU.jpg Graphic file (type bmp)
 <SPU.jpg>
-[11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 664.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 664.
+[12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 722.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 722.
 (./Artigo.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 664.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 664.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 722.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 722.
 Package rerunfilecheck Info: File `Artigo.out' has not changed.
-(rerunfilecheck)             Checksum: 1079C053F132D17E3404CC3120E0FADC.
+(rerunfilecheck)             Checksum: BCA845D860BCAC6E07E16D2CA475FD0E.
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
  ) 
 Here is how much of TeX's memory you used:
- 25106 strings out of 494878
- 467729 string characters out of 6174998
- 582649 words of memory out of 5000000
- 28758 multiletter control sequences out of 15000+600000
+ 24679 strings out of 494878
+ 457004 string characters out of 6176290
+ 576405 words of memory out of 5000000
+ 28339 multiletter control sequences out of 15000+600000
  561238 words of font info for 90 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 61i,12n,116p,803b,496s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,12n,116p,803b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Artigo.pdf (11 pages).
+Output written on Artigo.pdf (12 pages).
